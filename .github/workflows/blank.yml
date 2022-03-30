@@ -50,7 +50,7 @@ jobs:
         with:
           bufVersion: v1.3.0
           protocPlugins:
-            ts-proto@1.39.0
+            ts-proto@1.110.2
           bufArgs:
             generate --config some-protos/idl/buf.yaml --template buf.gen.yaml
 
