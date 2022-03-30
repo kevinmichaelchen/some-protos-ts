@@ -23,6 +23,11 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    # The environment we want to access is "build".
+    # I wasn't sure what to name it, since we're not actually deploying code to any environment.
+    # Rather, we are simply building protobufs which will get used on all environments.
+    environment: build
+
     if: "!contains(github.event.head_commit.message, 'Auto-generated code')"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
