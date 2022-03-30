@@ -53,10 +53,8 @@ jobs:
       - name: List after compile
         run: |
           ls -la
-          echo Finding LOCAL bin
-          find .bin
           echo Finding ROOT bin
-          find /.bin
+          find ${{ github.action_path }}/.bin
 
       # Commit auto-generated code
       - name: Commit auto-generated code
