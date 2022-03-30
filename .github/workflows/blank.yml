@@ -52,7 +52,7 @@ jobs:
           protocPlugins:
             ts-proto@1.110.2
           bufArgs:
-            generate --config some-protos/idl/buf.yaml --template buf.gen.yaml
+            generate --config some-protos/idl/buf.yaml --template buf.gen.yaml --help
 
       # LIST STUFF
       - name: List after compile
