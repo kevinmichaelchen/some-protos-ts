@@ -1,5 +1,9 @@
 # Ignore JetBrains editor stuff
 .idea
 
+node_modules
+
+dist/
+
 # Ignore the Protobuf monorepo. We can clone it during the build, but we never want to check it in.
 **/some-protos/
