@@ -40,6 +40,11 @@ jobs:
           repository: kevinmichaelchen/some-protos
           path: some-protos
 
+      # LIST STUFF
+      - name: List before compile
+        run: |
+          ls -la
+
       # Compile protobufs
       - uses: ory/build-buf-action@v0
         with:
@@ -48,6 +53,11 @@ jobs:
             ts-proto@1.39.0
           bufArgs:
             generate --config some-protos/idl/buf.yaml --template buf.gen.yaml
+
+      # LIST STUFF
+      - name: List after compile
+        run: |
+          ls -la
 
       # Commit auto-generated code
       - name: Commit auto-generated code
