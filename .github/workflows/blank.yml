@@ -40,13 +40,6 @@ jobs:
           repository: kevinmichaelchen/some-protos
           path: some-protos
 
-      # Symlink TypeScript Proto Plugin
-      - name: Symlink Typescript Proto Plugin
-        run: |
-          mkdir .bin
-          ln -s ${{ github.action_path }}/.bin/node_modules/ts-proto/protoc-gen-ts_proto .bin/protoc-gen-ts_proto
-          ls -la ${{ github.action_path }}/.bin/node_modules/ts-proto/protoc-gen-ts_proto
-
       # Compile protobufs
       - uses: ory/build-buf-action@v0
         with:
