@@ -37,6 +37,7 @@ jobs:
       - name: Check out Protobuf monorepo
         uses: actions/checkout@v3
         with:
+          ref: main
           repository: kevinmichaelchen/some-protos
           path: some-protos
 
