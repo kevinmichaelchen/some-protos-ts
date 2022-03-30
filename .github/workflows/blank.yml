@@ -53,7 +53,7 @@ jobs:
       - name: List after compile
         run: |
           ls -la
-          find ./src || true
+          find . -type f -not -path '*/\.git/*' -not -path '*/\.idea/*' -not -path '*/\some-protos/*'
 
       # Commit auto-generated code
       - name: Commit auto-generated code
@@ -67,10 +67,7 @@ jobs:
           git checkout "${GITHUB_REF:11}"
           echo "~~ status"
           git status
-          echo "~~ find"
-          find ./src || true
           ls -la
-          ls -la ./src/some-protos/idl/some/protos/greeter/v1beta1/greeter.ts
           echo "~~ adding"
           git add .
           git commit -am "Auto-generated code" || true
