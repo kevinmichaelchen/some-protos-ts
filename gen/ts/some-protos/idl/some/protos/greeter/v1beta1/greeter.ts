@@ -1,8 +1,8 @@
 /* eslint-disable */
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
+import Long from 'long';
+import * as _m0 from 'protobufjs/minimal';
 
-export const protobufPackage = "some.protos.greeter.v1beta1";
+export const protobufPackage = 'some.protos.greeter.v1beta1';
 
 /** The request message containing the user's name. */
 export interface SayHelloRequest {
@@ -15,7 +15,7 @@ export interface SayHelloResponse {
 }
 
 function createBaseSayHelloRequest(): SayHelloRequest {
-  return { name: "" };
+  return { name: '' };
 }
 
 export const SayHelloRequest = {
@@ -23,7 +23,7 @@ export const SayHelloRequest = {
     message: SayHelloRequest,
     writer: _m0.Writer = _m0.Writer.create()
   ): _m0.Writer {
-    if (message.name !== "") {
+    if (message.name !== '') {
       writer.uint32(10).string(message.name);
     }
     return writer;
@@ -49,7 +49,7 @@ export const SayHelloRequest = {
 
   fromJSON(object: any): SayHelloRequest {
     return {
-      name: isSet(object.name) ? String(object.name) : "",
+      name: isSet(object.name) ? String(object.name) : '',
     };
   },
 
@@ -63,13 +63,13 @@ export const SayHelloRequest = {
     object: I
   ): SayHelloRequest {
     const message = createBaseSayHelloRequest();
-    message.name = object.name ?? "";
+    message.name = object.name ?? '';
     return message;
   },
 };
 
 function createBaseSayHelloResponse(): SayHelloResponse {
-  return { message: "" };
+  return { message: '' };
 }
 
 export const SayHelloResponse = {
@@ -77,7 +77,7 @@ export const SayHelloResponse = {
     message: SayHelloResponse,
     writer: _m0.Writer = _m0.Writer.create()
   ): _m0.Writer {
-    if (message.message !== "") {
+    if (message.message !== '') {
       writer.uint32(10).string(message.message);
     }
     return writer;
@@ -103,7 +103,7 @@ export const SayHelloResponse = {
 
   fromJSON(object: any): SayHelloResponse {
     return {
-      message: isSet(object.message) ? String(object.message) : "",
+      message: isSet(object.message) ? String(object.message) : '',
     };
   },
 
@@ -117,7 +117,7 @@ export const SayHelloResponse = {
     object: I
   ): SayHelloResponse {
     const message = createBaseSayHelloResponse();
-    message.message = object.message ?? "";
+    message.message = object.message ?? '';
     return message;
   },
 };
@@ -137,8 +137,8 @@ export class GreeterServiceClientImpl implements GreeterService {
   SayHello(request: SayHelloRequest): Promise<SayHelloResponse> {
     const data = SayHelloRequest.encode(request).finish();
     const promise = this.rpc.request(
-      "some.protos.greeter.v1beta1.GreeterService",
-      "SayHello",
+      'some.protos.greeter.v1beta1.GreeterService',
+      'SayHello',
       data
     );
     return promise.then((data) =>
