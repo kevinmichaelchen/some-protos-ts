@@ -4,3 +4,5 @@ plugins:
     out: gen/ts
     strategy: all
     path: protoc-gen-ts_proto
+    opt:
+      - esModuleInterop=true
