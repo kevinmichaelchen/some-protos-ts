@@ -58,6 +58,7 @@ jobs:
       # Commit auto-generated code
       - name: Commit auto-generated code
         run: |
+          git config --global init.defaultBranch main
           git config --global user.name 'Github Actions'
           git config --global user.email 'github-actions@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
