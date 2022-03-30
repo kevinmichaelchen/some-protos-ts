@@ -53,12 +53,13 @@ jobs:
           protocPlugins:
             ts-proto@1.110.2
           bufArgs:
-            generate --config some-protos/idl/buf.yaml --template buf.gen.yaml --help
+            generate --config some-protos/idl/buf.yaml --template buf.gen.yaml
 
       # LIST STUFF
       - name: List after compile
         run: |
           ls -la
+          find .bin
 
       # Commit auto-generated code
       - name: Commit auto-generated code
