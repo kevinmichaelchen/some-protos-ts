@@ -44,7 +44,7 @@ jobs:
       - name: Symlink Typescript Proto Plugin
         run: |
           REPO_DIR="$(pwd)"
-          find . -type f -not -path '*/\.git/*' -not -path '*/\.idea/*'
+          find . -type f -not -path '*/\.git/*' -not -path '*/\.idea/*' -not -path '*/\some-protos/*'
           mkdir .bin
           ln -s ${{ github.action_path }}/.bin/node_modules/ts-proto/protoc-gen-ts_proto .bin/protoc-gen-ts_proto
           find .bin || true
