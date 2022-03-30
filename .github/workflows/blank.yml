@@ -61,15 +61,16 @@ jobs:
           git config --global user.name 'Github Actions'
           git config --global user.email 'github-actions@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          echo status
+          echo "~~ status"
           git status
-          echo checkout
+          echo "~~ checkout"
           git checkout "${GITHUB_REF:11}"
-          echo status
+          echo "~~ status"
           git status
-          echo find
+          echo "~~ find"
           find ./src || true
-          echo adding
+          ls -la ./src/some-protos/idl/some/protos/greeter/v1beta1/greeter.ts
+          echo "~~ adding"
           git add .
           git commit -am "Auto-generated code" || true
           git push || true
