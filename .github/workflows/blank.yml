@@ -65,5 +65,5 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout "${GITHUB_REF:11}"
           git add gen
-          git commit -am "Auto-generated code"
+          git status && git commit -am "Auto-generated code"
           git push
