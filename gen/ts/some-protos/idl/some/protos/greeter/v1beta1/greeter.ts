@@ -12,6 +12,7 @@ export interface SayHelloRequest {
 
 /** The response message containing the greetings */
 export interface SayHelloResponse {
+  /** The message */
   message: string;
 }
 
