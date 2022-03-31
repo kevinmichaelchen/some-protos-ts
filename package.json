@@ -4,8 +4,10 @@
     "type": "git",
     "url": "https://github.com/kevinmichaelchen/some-protos-ts.git"
   },
-  "version": "1.0.0",
-  "files": ["gen"],
+  "version": "1.0.1",
+  "files": [
+    "gen"
+  ],
   "description": "A repo containing TypeScript code compiled from protobufs contained in  [some-protos](https://github.com/kevinmichaelchen/some-protos).",
   "main": "index.js",
   "scripts": {
