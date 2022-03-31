@@ -70,7 +70,7 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout "${GITHUB_REF:11}"
           git add gen
-          git diff --quiet && git diff --staged --quiet || (npm version --no-git-tag-version patch && git commit -am "Auto-generated code")
+          git diff --quiet && git diff --staged --quiet || (npm version --no-git-tag-version patch && git commit -am "fix(gen): Auto-generated code")
           git push
 
   publish-gpr:
