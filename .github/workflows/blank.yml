@@ -90,8 +90,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@kevinmichaelchen'
       - run: npm ci
-      - run: pwd && ls -la
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
-      - run: npm publish
+      - run: npm run semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
