@@ -86,6 +86,10 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@kevinmichaelchen'
+      # Pull latest code
+      - name: Pull latest code
+        run: |
+          git pull
       - run: npm ci
       - run: npm run semantic-release
         env:
