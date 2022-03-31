@@ -6,3 +6,4 @@ plugins:
     path: protoc-gen-ts_proto
     opt:
       - esModuleInterop=true
+      - outputServices=generic-definitions
