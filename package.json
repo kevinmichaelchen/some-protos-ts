@@ -1,5 +1,8 @@
 {
   "name": "@kevinmichaelchen/some-protos-ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kevinmichaelchen/some-protos-ts.git"
