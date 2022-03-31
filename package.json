@@ -1,0 +1,19 @@
+{
+  "name": "some-protos-ts",
+  "version": "1.0.0",
+  "description": "A repo containing TypeScript code compiled from protobufs contained in  [some-protos](https://github.com/kevinmichaelchen/some-protos).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinmichaelchen/some-protos-ts.git"
+  },
+  "author": "Kevin Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinmichaelchen/some-protos-ts/issues"
+  },
+  "homepage": "https://github.com/kevinmichaelchen/some-protos-ts#readme"
+}
