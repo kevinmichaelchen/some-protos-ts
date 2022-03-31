@@ -125,37 +125,21 @@ export const SayHelloResponse = {
 };
 
 /** The greeting service definition. */
-export interface GreeterService {
-  /** Sends a greeting */
-  SayHello(request: SayHelloRequest): Promise<SayHelloResponse>;
-}
-
-export class GreeterServiceClientImpl implements GreeterService {
-  private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
-    this.rpc = rpc;
-    this.SayHello = this.SayHello.bind(this);
-  }
-  SayHello(request: SayHelloRequest): Promise<SayHelloResponse> {
-    const data = SayHelloRequest.encode(request).finish();
-    const promise = this.rpc.request(
-      "some.protos.greeter.v1beta1.GreeterService",
-      "SayHello",
-      data
-    );
-    return promise.then((data) =>
-      SayHelloResponse.decode(new _m0.Reader(data))
-    );
-  }
-}
-
-interface Rpc {
-  request(
-    service: string,
-    method: string,
-    data: Uint8Array
-  ): Promise<Uint8Array>;
-}
+export const GreeterServiceDefinition = {
+  name: "GreeterService",
+  fullName: "some.protos.greeter.v1beta1.GreeterService",
+  methods: {
+    /** Sends a greeting */
+    sayHello: {
+      name: "SayHello",
+      requestType: SayHelloRequest,
+      requestStream: false,
+      responseType: SayHelloResponse,
+      responseStream: false,
+      options: {},
+    },
+  },
+} as const;
 
 type Builtin =
   | Date
