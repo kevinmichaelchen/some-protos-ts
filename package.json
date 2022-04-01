@@ -12,7 +12,7 @@
   "files": [
     "gen"
   ],
-  "description": "A repo containing TypeScript code compiled from protobufs contained in  [some-protos](https://github.com/kevinmichaelchen/some-protos).",
+  "description": "TypeScript code compiled from protobufs contained in [some-protos](https://github.com/kevinmichaelchen/some-protos).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
