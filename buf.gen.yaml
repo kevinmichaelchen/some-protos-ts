@@ -7,3 +7,4 @@ plugins:
     opt:
       - esModuleInterop=true
       - outputServices=generic-definitions
+      - useExactTypes=false
