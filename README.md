@@ -8,12 +8,15 @@ A repo containing TypeScript code compiled from protobufs contained in
 This build is powered by the [ts-proto](https://github.com/stephenh/ts-proto) 
 library.
 
+## Using this code with nice-grpc
+To see this code being used in a sample Typescript app with [**nice-grpc**](https://github.com/deeplay-io/nice-grpc),
+check out [**some-protos-ts-example**](https://github.com/kevinmichaelchen/some-protos-ts-example).
+
 ## Tuning the TypeScript Transpiler
 There are lots of [build options](https://github.com/stephenh/ts-proto#supported-options)
 worth considering:
 * `context=true` — allows for a Go-style `ctx` parameter for logging and tracing
 * `forceLong=long` — all 64-bit numbers will be parsed with the [long](https://www.npmjs.com/package/long) library
-* `esModuleInterop=true` — `esModuleInterop` compliance
 * and more
 
 ## Semantic-Release
