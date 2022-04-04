@@ -6,7 +6,7 @@ export const protobufPackage = "some.protos.greeter.v1beta1";
 
 /** The request message containing the user's name. */
 export interface SayHelloRequest {
-  /** The user's name */
+  /** The user's name. */
   name: string;
 }
 
