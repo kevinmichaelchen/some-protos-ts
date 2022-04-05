@@ -7,6 +7,7 @@ const tsFiles = fg.sync(['gen/**/*.ts']);
 
 console.log("tsFiles", tsFiles)
 
+// "gen/ts/some-protos/idl/some/protos/greeter/v1beta1/greeter.ts" => "gen/ts/some-protos/idl"
 const getPrefix = p => p === "" || p.endsWith("idl") ? p : getPrefix(path.dirname(p))
 
 // full path will be something like:
